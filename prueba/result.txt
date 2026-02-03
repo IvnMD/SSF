@@ -1,0 +1,14 @@
+total 12
+-rw-rw-r-- 1 dam dam   37 ene 28 18:26 caballo.txt
+-rw-rw-r-- 1 dam dam  381 feb  3 19:59 nombres.txt
+drwxrwxr-x 2 dam dam 4096 ene 29 18:57 pruebota
+-rw-rw-r-- 1 dam dam    0 feb  3 20:01 result.txt
+total 24
+drwxrwxr-x 3 dam dam 4096 feb  3 20:11 .
+drwxrwxr-x 4 dam dam 4096 ene 28 17:09 ..
+-rw-rw-r-- 1 dam dam   37 ene 28 18:26 caballo.txt
+-rw-rw-r-- 1 dam dam  381 feb  3 19:59 nombres.txt
+-rw-rw-r-- 1 dam dam    0 feb  3 20:11 out.txt
+-rw-rw-r-- 1 dam dam    0 feb  3 20:11 pedro
+drwxrwxr-x 2 dam dam 4096 ene 29 18:57 pruebota
+-rw-rw-r-- 1 dam dam  209 feb  3 20:01 result.txt

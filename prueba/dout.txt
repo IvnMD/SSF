@@ -1,0 +1,2 @@
+ls: opción incorrecta -- «j»
+Pruebe 'ls --help' para más información.
