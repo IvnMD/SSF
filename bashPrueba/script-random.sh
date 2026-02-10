@@ -4,6 +4,7 @@
 objetivo=$(( ( RANDOM % 10 ) + 1 ))
 intentos=3
 
+clear
 echo
 echo
 echo "¡He pensado un número 1 entre y 10!"
