@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Autor: IvnMD
+# Fecha: 24/02/26
+# Sistemas Informaticos: Organizador del caos
+#	 Este script de Bash es una herramienta de automatización diseñada para organizar directorios desordenados.
+#	 Clasifica archivos por su tipo, detecta elementos vacíos y permite una gestión interactiva en carpetas.
+
+
 # Parámetro de entrada =  directorio a limpiar (si no hay parametro, carpeta actual)
 DIRECTORIO="${1:-.}"
 
