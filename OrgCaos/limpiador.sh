@@ -20,20 +20,23 @@ if [ $num_vacios -gt 0 ]; then
 fi
 
 # Creamos carpetas de destino
-mkdir -p "$DIRECTORIO/IMGS" "$DIRECTORIO/DOCS" "$DIRECTORIO/TXTS" "$DIRECTORIO/PDFS"
+mkdir -p "$DIRECTORIO/IMGS" "$DIRECTORIO/DOCS" "$DIRECTORIO/TXTS" "$DIRECTORIO/PDFS" "$DIRECTORIO/OTROS"
 
 # Clasificamos por tipo
 num_imgs=$(find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) | wc -l)
 find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -exec mv {} "$DIRECTORIO/IMGS/" \;
 
-num_docs=$(find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.docx" -o -name "*.odt" \) | wc -l)
-find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.docx" -o -name "*.odt" \) -exec mv {} "$DIRECTORIO/DOCS/" \;
+num_docs=$(find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.docx" -o -name "*.odt" -o -name "*.doc" \) | wc -l)
+find "$DIRECTORIO" -maxdepth 1 -type f \( -name "*.docx" -o -name "*.odt" -o -name "*.doc" \) -exec mv {} "$DIRECTORIO/DOCS/" \;
 
 num_txts=$(find "$DIRECTORIO" -maxdepth 1 -type f -name "*.txt" | wc -l)
 find "$DIRECTORIO" -maxdepth 1 -type f -name "*.txt" -exec mv {} "$DIRECTORIO/TXTS/" \;
 
 num_pdfs=$(find "$DIRECTORIO" -maxdepth 1 -type f -name "*.pdf" | wc -l)
 find "$DIRECTORIO" -maxdepth 1 -type f -name "*.pdf" -exec mv {} "$DIRECTORIO/PDFS/" \;
+
+num_otros=$(find "$DIRECTORIO" -maxdepth 1 -type f ! -name "*.sh" | wc -l)
+find "$DIRECTORIO" -maxdepth 1 -type f ! -name "*.sh" -exec mv {} "$DIRECTORIO/OTROS/" \;
 
 # Listamos directorios vacios excluyendo las objetivo y el directorio actual
 lista_dir_vacios=$(find "$DIRECTORIO" -maxdepth 1 -type d -empty ! -name "IMGS" ! -name "DOCS" ! -name "TXTS" ! -name "PDFS" ! -name "VACIOS" ! -name "$(basename "$DIRECTORIO")" -exec basename {} \;)
@@ -46,6 +49,7 @@ echo "Imágenes: $num_imgs"
 echo "Documentos: $num_docs"
 echo "Textos: $num_txts"
 echo "PDFs: $num_pdfs"
+echo "Otros formatos: $num_otros"
 echo "Elementos vacíos: $((num_vacios + num_dir_vacios))"
 echo ""
 
