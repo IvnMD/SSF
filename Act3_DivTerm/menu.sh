@@ -12,9 +12,11 @@
 #          5. Espacio usado en tu carpeta
 
 
-while true; do 
-echo " "
-echo "-----------------------------"
+while true; do
+
+echo ""
+echo "/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/"
+echo ""
 echo "Bienvenido a su menu bash:"
 echo ""
 echo "Seleccione accion desea realizar:"
@@ -34,26 +36,28 @@ echo ""
 	1) 
 		echo "Espacio libre en disco (%)" 
 		echo ""
-		df --output=pcent
-	;;
+    df --output=source,pcent
+    ;;
 
 	2)
 		echo "Espacio libre (tamaño)" 
 		echo ""
 
-		df -h / | awk 'NR==2 {print $4}'
-	;;
+    df -h --output=source,avail
+    ;;
 
 	3)
 		echo "Usuario actual y nombre de la máquina: "
-		echo "Usuario: " whoami
-		echo "Maquina: " hostname
-	;;
+    echo "Usuario: $USER"
+    echo "Maquina: $(hostname)"
+    ;;
 	
 	4)
 		echo "Números de usuarios en la máquina (/etc/passwd): " 
-		wc -l /etc/psswd
-	;;
+    grep -E "/bash$|/sh$|/zsh$" /etc/passwd | cut -d: -f1
+    echo ""
+    echo "Total: $(grep -E "/bash$|/sh$|/zsh$" /etc/passwd | wc -l)"  #Pedido a la IA para no mostrar todos los usuarios y solo mostrar usuarios reales.
+    ;;
 
 	5)
 		echo "Espacio usado en tu carpeta: " 
