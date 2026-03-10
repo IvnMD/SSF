@@ -22,3 +22,6 @@ Desktop.ini
 # Ignorar archivos de compilación
 build/
 dist/
+
+# Ignorar la carpeta examenes
+Examenes
