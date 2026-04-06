@@ -1,0 +1,48 @@
+1) David no puede eliminar el archivo porque el unico que tiene permisos para modificar ese archico es el root. 
+    De hecho, el root solo tiene permisos de lectura y escritura, pero no ejecuciion. 
+
+2) 1- Directorio
+
+3) 
+
+4) Kill trata de cerrar un proceso de forma "amable" dandole opcion de tratar de salvaguardar algun dato o estado 
+    y pudiendo ser ignorado en algunas situaciones
+    Kill -9 interrumpe el proceso de forma abrupta, cerrandolo inmediatamente.
+
+5) Un proceso es un programa o instruccion en ejecución. Haciendo una
+
+6) Un hard link apunta directamente al inodo de un archivo, siendo un enlace directo a él, 
+    mientras que un enlace simbolico es tan solo una ruta a la ubicacion del mismo. 
+
+7) No. Los enlaces simbolicos no aumentan el tamaño ya que como explique en la respuesta anterior el hard link
+    apunta al inodo de un archivo, pero no lo duplica en memoria. 
+
+8) Un programa es una serie de instrucciones, codigo y mensajes que esta en estado estacionario o inactivo, mientras que un 
+    proceso es un una serie de instrucciones o programas funcionando en ese intante en el sistema utilizando capacidad de computo
+    de la CPU y la RAM.
+
+9) Los estados de un proceso es la situacion en la que se encuentra un proceso en un momento dado. Puede ser activo, inactivo,
+    en primer plano o en segundo, zombie, detenido, etc. Son necesarios porque si los procesos no cambiaran de estado seria
+    relativamente sencillo que coparan la capacidad de la CPU al poco tiempo de arrancar el sistema ya que no le permitiria a 
+    la misma gestionarlos de manera efectiva.
+
+10) Quiere decir que un proceso no ha podido entregar la salida de finalizacion del proceso a su proceso padre, por lo que el sistema 
+    lo sigue detectanto y referenciando a pesar de que ya no consuma potencia de calculo ni memoria en el equipo.
+
+
+11) Un proceso en primer plano es todo proceso que puede ser percibido por el usuario del sistema mientras que un proceso en
+    segundo plano es todo proceso que corre en el sistema sin que el usuario pueda verlo de manera normal (exceptuando forzar 
+    alguna accion o comando para poder verlos). Normalmente los procesos que lanza el usuario estan en primer plano y los procesos
+    que mantienen funcionando el sistema estan en segundo plano, aunque ninguno de los dos estados es exclusivo de estas situaciones.
+
+12) Los pipes nos permiten entre otras cosas, encadenar comandos, utilizar ficheros y la salida de un comando como la entrada de otro, 
+    hacer condicionales, depurar errores en ficheros o en pantalla, se pueden crear ficheros con la salida de un comando, etc. Se puede
+    usar mas de un pipe por linea sin problema, ya que si por ejemplo, un comando es un condicional como por ejemplo && por ejemplo solo
+    ejecutara los comandos posteriores si los anteriores se cumplen. Otro tipo de redireccion interesando es >, que envia la salida de un 
+    comando a un documento (hay que tener cuidado para no eliminar el contenido anterior si lo hubiese), tambien >> que añade la salida del
+    comando al final del documento, || que hace las veces de OR lógico permitiendo al sistema ejecutar el segundo comando solo si el primero
+    da error. 
+
+13) mkdir -p AULA_{A,B,C,D,E}/PUESTO_{01..25}
+
+14) 
